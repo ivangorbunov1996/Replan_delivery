@@ -23,9 +23,9 @@ class CardDeliveryTest {
     @DisplayName("Should successful plan and replain meeting")
     void shouldSuccessfulPlanAndReplanMeeting() {
         DataGenerator.UserInfo validUser = DataGenerator.Registration.generateUser("ru");
-        int daysToAddInFirstMeeting = 10;
+        int daysToAddInFirstMeeting = 8;
         String firstMeetingDate = DataGenerator.generateDate(daysToAddInFirstMeeting);
-        int daysToAddInReplain = 13;
+        int daysToAddInReplain = 11;
         String replainDate = DataGenerator.generateDate(daysToAddInReplain);
         $("[data-test-id=city] input").setValue(validUser.getCity());
         $(".calendar-input__custom-control input").doubleClick().sendKeys(firstMeetingDate);
